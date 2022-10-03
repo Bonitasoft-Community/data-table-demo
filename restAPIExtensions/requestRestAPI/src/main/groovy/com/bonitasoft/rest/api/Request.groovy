@@ -83,6 +83,7 @@ class Request implements RestApiController {
 		
 		// Use the groovy dynamic method invokation
 		LOGGER.info("Invoking RequestDAO.${queryMethod}(title: $title, reporterId: $reporterId, assigneeId: $assigneeId , p: ${p.toInteger() * c.toInteger()}, c: ${c.toInteger()})")
+		def identityAPI = context.apiClient.identityAPI
 		def result = dao."$queryMethod"(title, reporterId, assigneeId, p.toInteger() * c.toInteger(), c.toInteger()).collect { r -> 
 			// Format request data
 			[

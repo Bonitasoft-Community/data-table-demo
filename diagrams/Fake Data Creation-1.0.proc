@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0" xmlns:configuration="http://www.bonitasoft.org/ns/studio/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_WagaED88Ee2L-O_Cmefnrg" name="Fake Data Creation" author="romain" bonitaVersion="7.13.0" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_WagaET88Ee2L-O_Cmefnrg" name="Initialize Data">
       <elements xmi:type="process:StartEvent" xmi:id="_WagaEz88Ee2L-O_Cmefnrg" name="Démarrer1" outgoing="_WagaKD88Ee2L-O_Cmefnrg">
@@ -77,6 +77,54 @@
         <condition xmi:type="expression:Expression" xmi:id="_cKNu4j88Ee2L-O_Cmefnrg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_WagaKz88Ee2L-O_Cmefnrg" name="Admin" initiator="true"/>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_ai9L8EMHEe202o66voVcpg" name="Qualification" version="7.12.0-004" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_ai9zAEMHEe202o66voVcpg">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_ai9zAUMHEe202o66voVcpg" name="Admin">
+            <groups xmi:type="actormapping:Groups" xmi:id="_ai9zAkMHEe202o66voVcpg">
+              <group>/acme</group>
+            </groups>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_ai9zA0MHEe202o66voVcpg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_ai9zBEMHEe202o66voVcpg"/>
+            <users xmi:type="actormapping:Users" xmi:id="_ai9zBUMHEe202o66voVcpg"/>
+          </actorMapping>
+        </actorMappings>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_ai9L8UMHEe202o66voVcpg" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_ai9L8kMHEe202o66voVcpg" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_ai9L80MHEe202o66voVcpg" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_ai9L9EMHEe202o66voVcpg" id="OTHER">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_cE8jIEMHEe202o66voVcpg" key="javafaker-1.0.2.jar" value="javafaker-1.0.2.jar" type="JAR"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_cE8jIUMHEe202o66voVcpg" key="commons-lang3-3.11.jar" value="commons-lang3-3.11.jar" type="JAR"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_cE8jIkMHEe202o66voVcpg" key="snakeyaml-1.23-android.jar" value="snakeyaml-1.23-android.jar" type="JAR"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_cE9KMEMHEe202o66voVcpg" key="generex-1.0.2.jar" value="generex-1.0.2.jar" type="JAR"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_cE9KMUMHEe202o66voVcpg" key="automaton-1.11-8.jar" value="automaton-1.11-8.jar" type="JAR"/>
+        </processDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_ai9L9UMHEe202o66voVcpg" id="GROOVY_SCRIPT"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_ai9L9kMHEe202o66voVcpg" id="OTHER"/>
+      </configurations>
+      <configurations xmi:type="configuration:Configuration" xmi:id="_c7UxgEMHEe202o66voVcpg" name="Production" version="7.12.0-004" username="walter.bates" password="bpm">
+        <actorMappings xmi:type="actormapping:ActorMappingsType" xmi:id="_c7Uxh0MHEe202o66voVcpg">
+          <actorMapping xmi:type="actormapping:ActorMapping" xmi:id="_c7UxiEMHEe202o66voVcpg" name="Admin">
+            <groups xmi:type="actormapping:Groups" xmi:id="_c7UxiUMHEe202o66voVcpg">
+              <group>/acme</group>
+            </groups>
+            <memberships xmi:type="actormapping:Membership" xmi:id="_c7UxikMHEe202o66voVcpg"/>
+            <roles xmi:type="actormapping:Roles" xmi:id="_c7Uxi0MHEe202o66voVcpg"/>
+            <users xmi:type="actormapping:Users" xmi:id="_c7UxjEMHEe202o66voVcpg"/>
+          </actorMapping>
+        </actorMappings>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_c7UxgUMHEe202o66voVcpg" id="CONNECTOR"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_c7UxgkMHEe202o66voVcpg" id="GROOVY_SCRIPT"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_c7Uxg0MHEe202o66voVcpg" id="ACTOR_FILTER"/>
+        <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_c7UxhEMHEe202o66voVcpg" id="OTHER">
+          <fragments xmi:type="configuration:Fragment" xmi:id="_ePZBcEMHEe202o66voVcpg" key="javafaker-1.0.2.jar" value="javafaker-1.0.2.jar" type="JAR"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_ePZBcUMHEe202o66voVcpg" key="commons-lang3-3.11.jar" value="commons-lang3-3.11.jar" type="JAR"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_ePZBckMHEe202o66voVcpg" key="snakeyaml-1.23-android.jar" value="snakeyaml-1.23-android.jar" type="JAR"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_ePZBc0MHEe202o66voVcpg" key="generex-1.0.2.jar" value="generex-1.0.2.jar" type="JAR"/>
+          <fragments xmi:type="configuration:Fragment" xmi:id="_ePZBdEMHEe202o66voVcpg" key="automaton-1.11-8.jar" value="automaton-1.11-8.jar" type="JAR"/>
+        </processDependencies>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_c7UxhUMHEe202o66voVcpg" id="GROOVY_SCRIPT"/>
+        <applicationDependencies xmi:type="configuration:FragmentContainer" xmi:id="_c7UxhkMHEe202o66voVcpg" id="OTHER"/>
+      </configurations>
       <contract xmi:type="process:Contract" xmi:id="_WagaLD88Ee2L-O_Cmefnrg"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_WagaLT88Ee2L-O_Cmefnrg">
         <name xmi:type="expression:Expression" xmi:id="_WagaLj88Ee2L-O_Cmefnrg" content="" returnTypeFixed="true"/>
