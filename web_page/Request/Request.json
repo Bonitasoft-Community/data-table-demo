@@ -1,0 +1,549 @@
+{
+  "modelVersion" : "2.2",
+  "id" : "Request",
+  "name" : "Request",
+  "lastUpdate" : 1664792710257,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "max-width"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "344a9d02-13f1-4721-a1bf-e2630134041f",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "Requests"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                }
+              },
+              "reference" : "2c9f49e2-b6b9-40e6-a431-72b5441892f4",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 4,
+                "lg" : 4
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "minLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "maxLength" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "readOnly" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "<span class=\"glyphicon glyphicon-filter\" aria-hidden=\"true\"></span> Filter by title"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 4
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : "Search by title"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "filterParams.title"
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "text"
+                },
+                "min" : {
+                  "type" : "constant"
+                },
+                "max" : {
+                  "type" : "constant"
+                },
+                "step" : {
+                  "type" : "constant",
+                  "value" : 1
+                }
+              },
+              "reference" : "ab356785-eb55-48d6-b3eb-5d6ed636e2ed",
+              "hasValidationError" : false,
+              "id" : "pbInput"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 3,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "<span class=\"glyphicon glyphicon-bullhorn\" aria-hidden=\"true\"></span> Reporter"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 3
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "availableValues" : {
+                  "type" : "expression",
+                  "value" : "dataProvider.reporters"
+                },
+                "displayedKey" : {
+                  "type" : "expression",
+                  "value" : "labelProvider.userName"
+                },
+                "returnedKey" : {
+                  "type" : "constant",
+                  "value" : "id"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "filterParams.reporterId"
+                }
+              },
+              "reference" : "f32569ee-acc8-4084-9c28-04f84b359e3b",
+              "hasValidationError" : false,
+              "id" : "pbSelect"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 3,
+                "lg" : 3
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "<span class=\"glyphicon glyphicon-user\" aria-hidden=\"true\"></span> Assignee"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 3
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "availableValues" : {
+                  "type" : "expression",
+                  "value" : "dataProvider.assignees"
+                },
+                "displayedKey" : {
+                  "type" : "expression",
+                  "value" : "labelProvider.userName"
+                },
+                "returnedKey" : {
+                  "type" : "constant",
+                  "value" : "id"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "filterParams.assigneeId"
+                }
+              },
+              "reference" : "4ed4607f-4908-404c-b01f-07c13283ceeb",
+              "hasValidationError" : false,
+              "id" : "pbSelect"
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 2,
+                "lg" : 2
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "required" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "# Results"
+                },
+                "labelPosition" : {
+                  "type" : "constant",
+                  "value" : "top"
+                },
+                "labelWidth" : {
+                  "type" : "constant",
+                  "value" : 5
+                },
+                "placeholder" : {
+                  "type" : "interpolation",
+                  "value" : ""
+                },
+                "availableValues" : {
+                  "type" : "expression",
+                  "value" : "['10', '20', '50', '100']"
+                },
+                "displayedKey" : {
+                  "type" : "constant"
+                },
+                "returnedKey" : {
+                  "type" : "constant"
+                },
+                "value" : {
+                  "type" : "variable",
+                  "value" : "pageSize"
+                }
+              },
+              "reference" : "90b1600d-c502-4575-bc6e-d2f2b5b34248",
+              "hasValidationError" : false,
+              "id" : "pbSelect"
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "headers" : {
+                  "type" : "constant",
+                  "value" : [
+                    "Id",
+                    "Title",
+                    "Status",
+                    "Reporter",
+                    "Creation Date",
+                    "Assignee"
+                  ]
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "Bonita API"
+                },
+                "apiUrl" : {
+                  "type" : "constant",
+                  "value" : "../API/extension/request"
+                },
+                "params" : {
+                  "type" : "expression",
+                  "value" : "filterParams"
+                },
+                "content" : {
+                  "type" : "expression",
+                  "value" : "requests"
+                },
+                "columnsKey" : {
+                  "type" : "constant",
+                  "value" : [
+                    "persistenceId",
+                    "title",
+                    "status | toLabel",
+                    "reporter | userName",
+                    "creationDate | uiDate",
+                    "assignee | userName"
+                  ]
+                },
+                "sortColumns" : {
+                  "type" : "constant",
+                  "value" : [
+                    "persistenceId",
+                    "status",
+                    "creationDate"
+                  ]
+                },
+                "selectedRow" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "pageSize" : {
+                  "type" : "expression",
+                  "value" : "pageSize"
+                },
+                "filter" : {
+                  "type" : "constant"
+                },
+                "striped" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "condensed" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "bordered" : {
+                  "type" : "constant",
+                  "value" : true
+                }
+              },
+              "reference" : "331b3ab1-42c3-4477-aa34-b2865a86bc3f",
+              "hasValidationError" : false,
+              "id" : "pbDataTable"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "5069dcf5-7dc1-4496-bd2c-9dc6b81fef40",
+      "name" : "filters.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    },
+    {
+      "id" : "044b75d7-8607-4017-a283-b0e7653b7f7c",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "5a5d88dc-84ab-443f-96d8-6181805ca47e",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "pageSize" : {
+      "type" : "constant",
+      "value" : [
+        "10"
+      ],
+      "exposed" : false
+    },
+    "users" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user?p=0&c=99&o=userName ASC"
+      ],
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
+      "exposed" : false
+    },
+    "filterParams" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "    \"title\": \"\",",
+        "    \"reporterId\" : \"-1\",",
+        "    \"assigneeId\" : \"-1\"",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "labelProvider" : {
+      "type" : "expression",
+      "value" : [
+        "return {",
+        "     userName: function(user){",
+        "        return !user.id ? 'Unassigned' : user.id == '-1' ? 'Any' :  user.firstname + ' ' + user.lastname;",
+        "     }",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "initDataProcess" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/process?p=0&c=1&f=name=Initialize Data"
+      ],
+      "advancedOptions" : {
+        "headers" : "",
+        "statusCode" : "",
+        "failedResponseValue" : ""
+      },
+      "exposed" : false
+    },
+    "dataProvider" : {
+      "type" : "expression",
+      "value" : [
+        "let assigneeArray = []",
+        "let reporterArray = []",
+        "if($data.users){",
+        "    const any = {userName:'Any', id:'-1'};",
+        "    const unassigned = {userName:'Unassigned'};",
+        "    assigneeArray = [...$data.users];",
+        "    assigneeArray.unshift(any, unassigned);",
+        "    ",
+        "    reporterArray = [...$data.users];",
+        "    reporterArray.unshift(any);",
+        "}",
+        "return {",
+        "    reporters : reporterArray, ",
+        "    assignees : assigneeArray",
+        "}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "904b2159-816a-425d-9d1c-d24508151a66",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}

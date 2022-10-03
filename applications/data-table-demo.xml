@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="data-table-demo" version="1.0" profile="User" homePage="demo" state="ACTIVATED" layout="custompage_layoutBonita" theme="custompage_themeBonita">
+        <displayName>Data table demo</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_Home" token="demo"/>
+            <applicationPage customPage="custompage_Request" token="requests"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="demo">
+                <displayName>Demo</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="requests">
+                <displayName>Requests</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.13.0">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.example.model.Request">
+            <fields>
+                <field type="STRING" length="255" name="title" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.example.model.Status" fetchType="EAGER" name="status" nullable="true" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="creationDate" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="assigneeId" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="reporterId" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findOrderByCreationDateAsc" content="SELECT r &#10;FROM Request r &#10;WHERE (:title is NULL OR r.title  LIKE CONCAT('%',:title ,'%')) &#10;AND  (:reporterId = -1 OR r.reporterId = :reporterId)&#10;AND  (:assigneeId = -1 OR r.assigneeId = :assigneeId OR r.assigneeId  is NULL AND :assigneeId is NULL)&#10;ORDER BY r.creationDate ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="title" className="java.lang.String"/>
+                        <queryParameter name="reporterId" className="java.lang.Integer"/>
+                        <queryParameter name="assigneeId" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+                <query name="findOrderByCreationDateDesc" content="SELECT r &#10;FROM Request r &#10;WHERE (:title is NULL OR r.title  LIKE CONCAT('%',:title ,'%')) &#10;AND  (:reporterId = -1 OR r.reporterId = :reporterId)&#10;AND  (:assigneeId = -1 OR r.assigneeId = :assigneeId OR r.assigneeId  is NULL AND :assigneeId is NULL)&#10;ORDER BY r.creationDate DESC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="title" className="java.lang.String"/>
+                        <queryParameter name="reporterId" className="java.lang.Integer"/>
+                        <queryParameter name="assigneeId" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+                <query name="findOrderByStatusNameDesc" content="SELECT r &#10;FROM Request r &#10;WHERE (:title is NULL OR r.title  LIKE CONCAT('%',:title ,'%')) &#10;AND  (:reporterId = -1 OR r.reporterId = :reporterId)&#10;AND  (:assigneeId = -1 OR r.assigneeId = :assigneeId OR r.assigneeId  is NULL AND :assigneeId is NULL)&#10;ORDER BY r.status.name DESC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="title" className="java.lang.String"/>
+                        <queryParameter name="reporterId" className="java.lang.Integer"/>
+                        <queryParameter name="assigneeId" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+                <query name="findOrderByStatusNameAsc" content="SELECT r &#10;FROM Request r &#10;WHERE (:title is NULL OR r.title  LIKE CONCAT('%',:title ,'%')) &#10;AND  (:reporterId = -1 OR r.reporterId = :reporterId)&#10;AND  (:assigneeId = -1 OR r.assigneeId = :assigneeId OR r.assigneeId  is NULL AND :assigneeId is NULL)&#10;ORDER BY r.status.name ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="title" className="java.lang.String"/>
+                        <queryParameter name="reporterId" className="java.lang.Integer"/>
+                        <queryParameter name="assigneeId" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+                <query name="countRequests" content="SELECT COUNT(r) &#10;FROM Request r &#10;WHERE (:title is NULL OR r.title  LIKE CONCAT('%',:title ,'%')) &#10;AND  (:reporterId = -1 OR r.reporterId = :reporterId)&#10;AND  (:assigneeId = -1 OR r.assigneeId = :assigneeId OR r.assigneeId  is NULL AND :assigneeId is NULL)" returnType="java.lang.Long">
+                    <queryParameters>
+                        <queryParameter name="title" className="java.lang.String"/>
+                        <queryParameter name="reporterId" className="java.lang.Integer"/>
+                        <queryParameter name="assigneeId" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+                <query name="findOrderByIdDesc" content="SELECT r &#10;FROM Request r &#10;WHERE (:title is NULL OR r.title  LIKE CONCAT('%',:title ,'%')) &#10;AND  (:reporterId = -1 OR r.reporterId = :reporterId)&#10;AND  (:assigneeId = -1 OR r.assigneeId = :assigneeId OR r.assigneeId  is NULL AND :assigneeId is NULL)&#10;ORDER BY r.persistenceId DESC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="title" className="java.lang.String"/>
+                        <queryParameter name="reporterId" className="java.lang.Integer"/>
+                        <queryParameter name="assigneeId" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+                <query name="findOrderByIdAsc" content="SELECT r &#10;FROM Request r &#10;WHERE (:title is NULL OR r.title  LIKE CONCAT('%',:title ,'%')) &#10;AND  (:reporterId = -1 OR r.reporterId = :reporterId)&#10;AND  (:assigneeId = -1 OR r.assigneeId = :assigneeId OR r.assigneeId  is NULL AND :assigneeId is NULL)&#10;ORDER BY r.persistenceId ASC" returnType="java.util.List">
+                    <queryParameters>
+                        <queryParameter name="title" className="java.lang.String"/>
+                        <queryParameter name="reporterId" className="java.lang.Integer"/>
+                        <queryParameter name="assigneeId" className="java.lang.Integer"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.example.model.Status">
+            <fields>
+                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints>
+                <uniqueConstraint name="uniqueName">
+                    <fieldNames>
+                        <fieldName>name</fieldName>
+                    </fieldNames>
+                </uniqueConstraint>
+            </uniqueConstraints>
+            <queries/>
+            <indexes>
+                <index name="NAME_INDEX">
+                    <fieldNames>
+                        <fieldName>name</fieldName>
+                    </fieldNames>
+                </index>
+            </indexes>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
