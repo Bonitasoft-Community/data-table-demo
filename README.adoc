@@ -1,0 +1,13 @@
+= Data Table Demo
+
+image:https://img.shields.io/badge/Bonita-2021.2-blue.svg?label=Minimum Bonita Version[Minimum Bonita Version, link=https://www.bonitasoft.com/downloads]
+image:https://img.shields.io/badge/License-GPL v2-orange.svg?label=GPL v2[]
+
+
+This Bonita project showcase the usage of the Data Table UI Designer widget coupled with Business Objects specific queries.
+
+== Installation
+
+. Clone this repository in a Bonita Studio
+. Deploy it using the `Production` environment
+. Open the `Data table demo` application and follow instructions
